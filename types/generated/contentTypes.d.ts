@@ -508,7 +508,6 @@ export interface ApiActorActor extends Struct.CollectionTypeSchema {
   };
   attributes: {
     name: Schema.Attribute.String;
-    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     biography: Schema.Attribute.Blocks;
     birth_date: Schema.Attribute.Date;
     popularity: Schema.Attribute.Integer;
