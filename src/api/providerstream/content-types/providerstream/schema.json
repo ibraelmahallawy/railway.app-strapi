@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "providerstreams",
+  "info": {
+    "singularName": "providerstream",
+    "pluralName": "providerstreams",
+    "displayName": "providerstream"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "url": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "tv",
+        "movie"
+      ]
+    },
+    "movies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "mappedBy": "providerstreams"
+    }
+  }
+}
